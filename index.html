@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">
+	<title>Rock,Paper,Scissors</title>
+</head>
+
+<body>
+
+
+	<div class="container">
+		<h4 class="justify-content-center d-flex mt-5 ">Rock Paper Scissors Game</h4>
+	</div>
+
+	<!-- Icons Table -->
+	<div class="btnIcons justify-content-center d-flex mt-5  ">
+		<button id="rock" class=""><img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRIzOKM-3bpQ3ai76995h02oVaIuyHozWVGw&usqp=CAU"
+				style="width: 2.5rem;">
+		</button>
+		<button id="paper"><img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb1LGuctNLBGl6wSxLJzz2R5ZUiF-JqnU4Pg&usqp=CAU"
+				style="width: 2.5rem;">
+		</button>
+
+		<button id="scissors"><img src="https://static.thenounproject.com/png/341563-200.png" style="width: 2.5rem;">
+		</button>
+	</div>
+
+	<!-- Score table -->
+	<div class="scores justify-content-center d-flex mt-5 ">
+		<div id="player" class="card">
+
+			<div class="card-body">
+				<h5 class="card-title">Human</h5>
+				<p id="playerScore" class="card-text justify-content-center d-flex">0</p>
+
+			</div>
+		</div>
+		<!-- computer -->
+		<div id="computer" class="card ">
+			<div class="card-body">
+				<h5 class="card-title">Computer</h5>
+				<p id="computerScore" class="card-text justify-content-center d-flex">0</p>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Total Result -->
+	<div class=" justify-content-center d-flex mt-5">
+		<div class=" card border-secondary mb-3" style="max-width: 18rem;">
+			<div class="card-header">Result</div>
+			<div class="card-body text-secondary">
+
+				<p id="totalResult" class="card-text"> paper beats the rock</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+		</script>
+	<script src="app.js"></script>
+</body>
+
+</html>
