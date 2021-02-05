@@ -45,14 +45,11 @@ function playRound(playerSelection, computerSelection = computerPlay()) {
     totalResult.innerHTML = output;
 
     //add if statment for after 5 match player win
-    if (playerScore === 5) {
-      totalResult.innerHTML = `<h5 class="text-success"> Congratulations player,<br> you won the battle against computer!</h5>`;
-      disable();
-      //setInterval for reloadung the web-Page
-      setInterval(() => {
-        location.reload();
-      }, 2000);
-    }
+    playerScore === 5 &&
+      handleWin(
+        "Congratulations player,<br> you won the battle against computer!",
+        "success"
+      );
   } else if (playerSelection === computerSelection) {
     // <= this tie both equal
     totalResult.innerHTML = `<h5 class="text-warning">It's a tie! ${playerSelection} = ${computerSelection}</h5>`;
@@ -63,14 +60,15 @@ function playRound(playerSelection, computerSelection = computerPlay()) {
     computer.innerHTML = computerScore;
 
     //add if statment, after 5 match Computer win
-    if (computerScore === 5) {
-      totalResult.innerHTML = `<h5 class="text-danger"> You lost the battle.</h5>`;
-      disable();
-
-      //adding the Setinterval for the Reload the Web-Page
-      setInterval(() => {
-        location.reload();
-      }, 2000);
-    }
+    computerScore === 5 && handleWin("You lost the battle.", "danger");
   }
 }
+
+const handleWin = (message, status) => {
+  totalResult.innerHTML = `<h5 class="text-${status}"> ${message}</h5>`;
+  disable();
+  //setInterval for reloadung the web-Page
+  setInterval(() => {
+    location.reload();
+  }, 2000);
+};
